@@ -1,14 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import {
-  IsNotEmpty,
-  IsString,
-  IsUUID,
-  IsNumber,
-  IsOptional,
-  IsUrl,
-  Min,
-  Max,
-} from 'class-validator';
+import { IsNotEmpty, IsString, IsOptional, IsUrl } from 'class-validator';
 
 export class CreateOurWorkProcessDto {
   /** Our work process title */

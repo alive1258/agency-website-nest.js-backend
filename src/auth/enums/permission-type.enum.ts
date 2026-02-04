@@ -25,6 +25,11 @@ export enum Permission {
   OUR_WORK_PROCESSES_DELETE = 'our-work-processes:delete',
   OUR_WORK_PROCESSES_MANAGE = 'our-work-processes:*',
 
+  TEAM_CREATE = 'team:create',
+  TEAM_READ = 'team:read',
+  TEAM_UPDATE = 'team:update',
+  TEAM_DELETE = 'team:delete',
+  TEAM_MANAGE = 'team:*',
   /* =========================
        Question Answer Management
    ========================= */

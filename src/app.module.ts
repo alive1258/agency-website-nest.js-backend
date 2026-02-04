@@ -42,6 +42,7 @@ import { PaymentsModule } from './modules/payments/payments/payments.module';
 import { ServiceVideosModule } from './modules/service-videos/service-videos.module';
 import { ServiceReviewsModule } from './modules/service-reviews/service-reviews.module';
 import { OurWorkProcessModule } from './modules/our-work-process/our-work-process.module';
+import { QuestionAnswersModule } from './modules/question-answers/question-answers.module';
 
 const ENV = process.env.NODE_ENV;
 
@@ -112,6 +113,7 @@ const ENV = process.env.NODE_ENV;
     ServiceVideosModule,
     ServiceReviewsModule,
     OurWorkProcessModule,
+    QuestionAnswersModule,
   ],
 
   controllers: [AppController],

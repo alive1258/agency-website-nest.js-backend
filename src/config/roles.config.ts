@@ -158,6 +158,12 @@ export const RoleBasedPermissions: Record<Role, Permission[]> = {
     Permission.OUR_WORK_PROCESSES_UPDATE,
     Permission.OUR_WORK_PROCESSES_DELETE,
     Permission.OUR_WORK_PROCESSES_MANAGE,
+
+    Permission.QUESTION_ANSWER_CREATE,
+    Permission.QUESTION_ANSWER_READ,
+    Permission.QUESTION_ANSWER_UPDATE,
+    Permission.QUESTION_ANSWER_DELETE,
+    Permission.QUESTION_ANSWER_MANAGE,
   ],
 
   [Role.MANAGER]: [

@@ -10,7 +10,7 @@ import {
 } from 'class-validator';
 import { PaginationQueryDto } from 'src/common/data-query/dto/data-query.dto';
 
-class GetServiceBaseDto {
+class GetBlogBaseDto {
   @ApiPropertyOptional({
     description: 'Filter by service name (partial match)',
     example: 'Web Development',
@@ -36,7 +36,7 @@ class GetServiceBaseDto {
   is_active?: boolean;
 }
 
-export class GetServiceDto extends IntersectionType(
-  GetServiceBaseDto,
+export class GetBlogDto extends IntersectionType(
+  GetBlogBaseDto,
   PaginationQueryDto,
 ) {}

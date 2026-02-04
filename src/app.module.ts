@@ -49,6 +49,9 @@ import { WhoWeAreFeaturesModule } from './modules/who-we-are-features/who-we-are
 import { BlogCategoriesModule } from './modules/blog-categories/blog-categories.module';
 import { BlogsModule } from './modules/blogs/blogs.module';
 import { BlogDetailsModule } from './modules/blog-details/blog-details.module';
+import { PortfolioCategoriesModule } from './modules/portfolio-categories/portfolio-categories.module';
+import { PortfolioModule } from './modules/portfolio/portfolio.module';
+import { PortfolioDetailsModule } from './modules/portfolio-details/portfolio-details.module';
 
 const ENV = process.env.NODE_ENV;
 
@@ -126,6 +129,9 @@ const ENV = process.env.NODE_ENV;
     BlogCategoriesModule,
     BlogsModule,
     BlogDetailsModule,
+    PortfolioCategoriesModule,
+    PortfolioModule,
+    PortfolioDetailsModule,
   ],
 
   controllers: [AppController],

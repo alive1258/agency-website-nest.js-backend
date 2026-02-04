@@ -43,6 +43,7 @@ import { ServiceVideosModule } from './modules/service-videos/service-videos.mod
 import { ServiceReviewsModule } from './modules/service-reviews/service-reviews.module';
 import { OurWorkProcessModule } from './modules/our-work-process/our-work-process.module';
 import { QuestionAnswersModule } from './modules/question-answers/question-answers.module';
+import { TeamsModule } from './modules/teams/teams.module';
 
 const ENV = process.env.NODE_ENV;
 
@@ -114,6 +115,7 @@ const ENV = process.env.NODE_ENV;
     ServiceReviewsModule,
     OurWorkProcessModule,
     QuestionAnswersModule,
+    TeamsModule,
   ],
 
   controllers: [AppController],

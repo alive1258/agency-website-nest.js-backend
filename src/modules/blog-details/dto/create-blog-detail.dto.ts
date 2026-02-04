@@ -11,7 +11,6 @@ import {
 } from 'class-validator';
 
 export class CreateBlogDetailDto {
-  /** Service name */
   @ApiProperty({
     description: 'Name of the service',
     example: 'Web Development',
@@ -20,7 +19,6 @@ export class CreateBlogDetailDto {
   @IsNotEmpty()
   title: string;
 
-  /** Category UUID */
   @ApiProperty({
     description: 'UUID of the related category',
     example: '8a3f0f7b-6d59-4db4-bdc1-2b45a9c9c5a1',
@@ -28,7 +26,6 @@ export class CreateBlogDetailDto {
   @IsUUID()
   blog_id: string;
 
-  /** Description */
   @ApiProperty({
     description: 'Detailed service description',
     example: 'Professional web development services',
@@ -37,7 +34,6 @@ export class CreateBlogDetailDto {
   @IsNotEmpty()
   description: string;
 
-  /** Key features (comma separated or JSON) */
   @ApiProperty({
     description: 'Key features of the service',
     example: 'Fast, Secure, Scalable',
@@ -47,7 +43,6 @@ export class CreateBlogDetailDto {
   @IsOptional()
   key_features?: string;
 
-  /** Image URL */
   @ApiProperty({
     description: 'Service image URL',
     example: 'https://example.com/image.jpg',
@@ -87,7 +82,7 @@ export class ServiceResponseDto {
   addedBy?: {
     id: string;
     name?: string;
-    email?: string; // <- make optional
+    email?: string;
     role?: string;
   };
 

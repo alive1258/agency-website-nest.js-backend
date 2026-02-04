@@ -26,6 +26,15 @@ export enum Permission {
   OUR_WORK_PROCESSES_MANAGE = 'our-work-processes:*',
 
   /* =========================
+       Question Answer Management
+   ========================= */
+  QUESTION_ANSWER_CREATE = 'question-answer:create',
+  QUESTION_ANSWER_READ = 'question-answer:read',
+  QUESTION_ANSWER_UPDATE = 'question-answer:update',
+  QUESTION_ANSWER_DELETE = 'question-answer:delete',
+  QUESTION_ANSWER_MANAGE = 'question-answer:*',
+
+  /* =========================
      Content Management
   ========================= */
   CONTENT_CREATE = 'content:create',

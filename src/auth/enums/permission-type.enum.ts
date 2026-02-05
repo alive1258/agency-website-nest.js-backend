@@ -211,6 +211,12 @@ export enum Permission {
   SERVICE_FAQ_DELETE = 'service-faq:delete',
   SERVICE_FAQ_MANAGE = 'service-faq:manage',
 
+  SERVICE_WORK_FLOW_CREATE = 'service-work-flow:create',
+  SERVICE_WORK_FLOW_READ = 'service-work-flow:read',
+  SERVICE_WORK_FLOW_UPDATE = 'service-work-flow:update',
+  SERVICE_WORK_FLOW_DELETE = 'service-work-flow:delete',
+  SERVICE_WORK_FLOW_MANAGE = 'service-work-flow:*',
+
   /* =========================
      Profile
   ========================= */

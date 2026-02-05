@@ -139,6 +139,12 @@ export const RoleBasedPermissions: Record<Role, Permission[]> = {
     Permission.SERVICE_FAQ_DELETE,
     Permission.SERVICE_FAQ_MANAGE,
 
+    Permission.SERVICE_WORK_FLOW_CREATE,
+    Permission.SERVICE_WORK_FLOW_READ,
+    Permission.SERVICE_WORK_FLOW_UPDATE,
+    Permission.SERVICE_WORK_FLOW_DELETE,
+    Permission.SERVICE_WORK_FLOW_MANAGE,
+
     Permission.PROFILE_READ,
     Permission.PROFILE_UPDATE,
 

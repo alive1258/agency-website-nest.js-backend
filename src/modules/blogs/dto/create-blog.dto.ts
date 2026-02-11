@@ -70,7 +70,7 @@ export class CreateBlogDto {
   image?: string;
 }
 
-export class ServiceResponseDto {
+export class BlogResponseDto {
   @ApiProperty({ description: 'Service UUID' })
   id: string;
 

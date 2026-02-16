@@ -11,6 +11,8 @@ import {
   ParseUUIDPipe,
   HttpStatus,
   UseGuards,
+  UploadedFile,
+  UseInterceptors,
 } from '@nestjs/common';
 import { OurWorkProcessService } from './our-work-process.service';
 import {
@@ -26,6 +28,7 @@ import { RequirePermissions } from 'src/auth/decorators/permissions.decorator';
 import { Permission } from 'src/auth/enums/permission-type.enum';
 import { Throttle } from '@nestjs/throttler';
 import type { Request } from 'express';
+import { FileInterceptor } from '@nestjs/platform-express';
 
 @Controller('our-work-process')
 export class OurWorkProcessController {
@@ -40,12 +43,18 @@ export class OurWorkProcessController {
   @RequirePermissions(Permission.OUR_WORK_PROCESSES_CREATE)
   @UseGuards(JwtOrApiKeyGuard, PermissionsGuard)
   @Throttle({ default: { limit: 20, ttl: 180 } })
+  @UseInterceptors(FileInterceptor('image'))
   @Post('create')
   create(
     @Req() req: Request,
     @Body() createOurWorkProcessDto: CreateOurWorkProcessDto,
+    @UploadedFile() file?: Express.Multer.File,
   ) {
-    return this.ourWorkProcessService.create(req, createOurWorkProcessDto);
+    return this.ourWorkProcessService.create(
+      req,
+      createOurWorkProcessDto,
+      file,
+    );
   }
 
   @ApiDoc({

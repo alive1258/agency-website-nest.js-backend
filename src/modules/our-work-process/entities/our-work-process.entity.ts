@@ -1,7 +1,4 @@
-import { BusinessWeCover } from 'src/modules/business-we-cover/entities/business-we-cover.entity';
-import { Category } from 'src/modules/categories/entities/category.entity';
 import { User } from 'src/modules/users/entities/user.entity';
-import { WhyChooseUs } from 'src/modules/why-choose-us/entities/why-choose-us.entity';
 import {
   Column,
   CreateDateColumn,
@@ -35,7 +32,6 @@ export class OurWorkProcess {
 
   @Column({ type: 'bigint', nullable: false })
   added_by: string;
-
   @ManyToOne(() => User, { nullable: false })
   @JoinColumn({ name: 'added_by' })
   addedBy: User;

@@ -52,7 +52,7 @@ export class DataResponseInterceptor<
       const method = request.method;
       const path = request.path.toLowerCase();
 
-      if (method === 'POST') return `Created successfully`;
+      if (method === 'POST') return `Operation successfully`;
       if (method === 'PUT' || method === 'PATCH') return `Updated successfully`;
       if (method === 'DELETE') return `Deleted successfully`;
       if (method === 'GET' && Array.isArray(data?.data))

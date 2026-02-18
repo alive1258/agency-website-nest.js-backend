@@ -88,13 +88,15 @@ export class OurWorkProcessController {
   })
   @RequirePermissions(Permission.OUR_WORK_PROCESSES_UPDATE)
   @UseGuards(JwtOrApiKeyGuard, PermissionsGuard)
+  @UseInterceptors(FileInterceptor('image'))
   @Throttle({ default: { limit: 20, ttl: 180 } })
   @Patch(':id')
   update(
     @Param('id', ParseUUIDPipe) id: string,
     @Body() updateOurWorkProcessDto: UpdateOurWorkProcessDto,
+    @UploadedFile() file?: Express.Multer.File,
   ) {
-    return this.ourWorkProcessService.update(id, updateOurWorkProcessDto);
+    return this.ourWorkProcessService.update(id, updateOurWorkProcessDto, file);
   }
 
   @ApiDoc({

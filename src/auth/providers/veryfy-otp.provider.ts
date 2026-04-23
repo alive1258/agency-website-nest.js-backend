@@ -77,12 +77,6 @@ export class VerifyOTPProvider {
     const tokens = await this.generateTokensProvider.generateTokens(user);
     return {
       ...tokens,
-      user: {
-        id: user.id,
-        name: user.name,
-        email: user.email,
-        role:user.role,
-      },
     };
   }
 }

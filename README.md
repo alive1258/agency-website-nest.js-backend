@@ -160,7 +160,7 @@ bun run test:cov
 Once the server is running, access Swagger UI at:
 
 ```
-http://localhost:3000/api/docs
+http://localhost:5000/api/v1/swagger
 ```
 
 ---
